@@ -9,7 +9,7 @@ BEGIN
 
 	IF EXISTS (SELECT 1 FROM Student)
 	BEGIN
-		SELECT COUNT(1) FROM Student_Class WHERE ClassId = @classId
+		SELECT @result = COUNT(1) FROM Student_Class WHERE ClassId = @classId
 
 		IF (@result IS NULL)
 		BEGIN
