@@ -10,10 +10,16 @@ Post-Deployment Script Template
 --------------------------------------------------------------------------------------
 */
 
-INSERT INTO Student VALUES ('FirstName1','LastName1', 21, GETDATE(), NULL) 
-INSERT INTO Student VALUES ('FirstName2','LastName2', 22, GETDATE(), NULL) 
-INSERT INTO Student VALUES ('FirstName3','LastName3', 23, GETDATE(), NULL) 
-INSERT INTO Student VALUES ('FirstName4','LastName4', 24, GETDATE(), NULL) 
+if((SELECT COUNT(1) FROM Student) = 0)
+begin
+
+	INSERT INTO Student VALUES ('FirstName1','LastName1', 21, GETDATE(), NULL) 
+	INSERT INTO Student VALUES ('FirstName2','LastName2', 22, GETDATE(), NULL) 
+	INSERT INTO Student VALUES ('FirstName3','LastName3', 23, GETDATE(), NULL) 
+	INSERT INTO Student VALUES ('FirstName4','LastName4', 24, GETDATE(), NULL) 
+
+end
+
 
 INSERT INTO Class VALUES ('Class1', 201, GETDATE(), NULL) 
 INSERT INTO Class VALUES ('Class2', 202, GETDATE(), NULL) 
