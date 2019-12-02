@@ -66,6 +66,8 @@
     <Build Include="VW_GetAllClasses.sql" />
     <Build Include="udf_GetAllStudentsPerClass.sql" />
     <Build Include="udtf_GetAllClassesAStudentTakes.sql" />
+    <Build Include="Function1.sql" />
+    <Build Include="udtf_GetAllStudentsByAge.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Script.PostDeployment1.sql" />
