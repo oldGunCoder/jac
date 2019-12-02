@@ -9,4 +9,4 @@ BEGIN
 END
 GO;
 
-EXEC dbo.sp_GetStudentAndClassInfoByAge @StudentAge = 22;
+
